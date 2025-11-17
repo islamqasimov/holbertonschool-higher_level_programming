@@ -1,4 +1,2 @@
 #!/usr/bin/python3 
-add = __import__("add_0").add
-
-print(add(3, 4))
+print(__import__("add_0").add(3, 4))
