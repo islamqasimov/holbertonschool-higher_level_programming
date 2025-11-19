@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 def max_integer(my_list=[]):
-    return sorted(my_list)[-1]
+    return None if my_list == [] else sorted(my_list)[-1]
