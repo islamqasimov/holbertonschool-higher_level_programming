@@ -8,3 +8,5 @@ def best_score(a_dictionary):
         return None
     except AttributeError:
         return None
+    except ValueError:
+        return None
