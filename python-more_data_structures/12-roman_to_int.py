@@ -16,9 +16,9 @@ def roman_to_int(roman_string):
     for i in range(len(roman_string)):
         count = 1
         num = roman_nums[roman_string[i]]
-        if i == 1 or i == len(roman_string) - 1:
+        if i == 0 or i == len(roman_string) - 1:
             result += num - temp
-        elif num > roman_nums[roman_string[i + count]]:
+        elif num >= roman_nums[roman_string[i + count]]:
             result += num - temp
             temp = 0
         else:
