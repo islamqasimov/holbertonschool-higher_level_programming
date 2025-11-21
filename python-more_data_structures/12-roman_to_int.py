@@ -13,15 +13,19 @@ def roman_to_int(roman_string):
     }
     temp = 0
     result = 0
+    count = 1
     for i in range(len(roman_string)):
-        count = 1
         num = roman_nums[roman_string[i]]
-        if i == 0 or i == len(roman_string) - 1:
+        if len(roman_string) == 1 or i == len(roman_string) - 1: 
             result += num - temp
+            temp = 0
+            count = 1
         elif num >= roman_nums[roman_string[i + count]]:
             result += num - temp
             temp = 0
+            count = 1
         else:
+            count += 1
             temp += num
     return result
 
