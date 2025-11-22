@@ -4,11 +4,11 @@ def safe_print_list_integers(my_list=[], x=0):
     try:
         for i in range(x):
             el = my_list[i]
-            if type(el) == type(5):
+            if type(el) == type(10):
                 print("{:d}".format(el), end='')
                 counter += 1
         print()
-    except (ValueError, TypeError, IndexError):
+    except (ValueError, TypeError):
         print()
         return counter
     return counter
