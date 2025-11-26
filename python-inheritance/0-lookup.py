@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lookup
+The lookup() function simply calls dir() on the object and returns the result as a list.
 """
 
 
