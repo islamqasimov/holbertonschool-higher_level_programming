@@ -5,4 +5,7 @@ The lookup() function simply calls dir() on the object and returns the result as
 
 
 def lookup(obj):
+    """
+    The lookup() function simply calls dir() on the object and returns the result as a list.
+    """
     return dir(obj)
