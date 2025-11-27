@@ -11,8 +11,8 @@ class Rectangle(BaseGeometry):
     """
     Subclass of BaseGeometry that represents Rectangle.
     """
-    def __init__(self, width, heigth):
+    def __init__(self, width, height):
         self.integer_validator("width", width)
-        self.__heigth = self.integer_validator("height", heigth)
+        self.__height = self.integer_validator("height", height)
         self.__width = width
-        self.__heigth = heigth
+        self.__height = height
