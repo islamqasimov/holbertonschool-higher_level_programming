@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Testing script that adds arguments to json file
+"""
+
 import sys
 
 if __name__ == "__main__":
