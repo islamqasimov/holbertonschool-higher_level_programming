@@ -8,7 +8,7 @@ def pascal_triangle(n):
     """
     Function that creates Pascal Triangle using nums of now (n)
     """
-    
+
     if n <= 0:
         return []
 
