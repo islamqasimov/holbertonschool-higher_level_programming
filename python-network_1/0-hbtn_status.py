@@ -7,4 +7,4 @@ with urllib.request.urlopen(req) as resp:
     print("Body response:")
     print("\t- type: ", type(body))
     print("\t- content: ", body)
-    print("\t- utf8: ", body.decode('utf-8'))
+    print("\t- utf8 content: ", body.decode('utf-8'))
