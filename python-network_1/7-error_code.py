@@ -11,14 +11,12 @@ import sys
 
 def main():
     url = sys.argv[1]
-    
+
     try:
         rsp = requests.get(url)
         rsp.raise_for_status()
     except requests.exceptions.HTTPError as e:
         print("Error code:", rsp.status_code)
-
-    
 
 
 if __name__ == '__main__':
