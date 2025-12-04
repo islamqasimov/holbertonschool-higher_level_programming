@@ -11,8 +11,8 @@ def main():
     rsp = requests.get(url)
 
     print("Body response:")
-    print("\t-", type(rsp.text))
-    print("\t-", rsp.text)
+    print("\t- type:", type(rsp.text))
+    print("\t- content:", rsp.text)
     
 
 
