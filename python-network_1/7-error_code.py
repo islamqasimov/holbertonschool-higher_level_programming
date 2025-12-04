@@ -15,6 +15,7 @@ def main():
     try:
         rsp = requests.get(url)
         rsp.raise_for_status()
+        print(rsp.text)
     except requests.exceptions.HTTPError as e:
         print("Error code:", rsp.status_code)
 
