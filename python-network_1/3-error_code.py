@@ -16,7 +16,7 @@ def main():
     try:
         with urllib.request.urlopen(req) as response:
             body = response.read()
-            print(body)
+            print(body.decode('utf8'))
     except urllib.error.HTTPError as e:
         print(f"Error code: {e.code}")
 
