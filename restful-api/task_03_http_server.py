@@ -38,10 +38,12 @@ class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
         elif self.path == '/status':
             self._send_headers()
             self.wfile.write(b"OK")
+            return
 
         else:
             self._send_headers(404)
             self.wfile.write(b"Endpoint not found")
+            return
 
 
 def run(server_class=http.server.HTTPServer, handler_class=SimpleAPIHandler):
