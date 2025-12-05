@@ -19,9 +19,9 @@ def main():
 def fetch_and_print_posts():
     rsp = requests.get(API_URL)
     print("Status code:", rsp.status_code)
-
-    for data in rsp.json():
-        print(data.get('title'))
+    if rsp.status_code == 200:
+        for data in rsp.json():
+            print(data.get('title'))
 
 
 def fetch_and_save_posts():
