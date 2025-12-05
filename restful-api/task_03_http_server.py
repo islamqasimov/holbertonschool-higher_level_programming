@@ -41,7 +41,7 @@ class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
 
         else:
             self._send_headers(404)
-            self.wfile.write(b"What u trin to test gigga ???")
+            self.wfile.write(b"Endpoint not found")
 
 
 def run(server_class=http.server.HTTPServer, handler_class=SimpleAPIHandler):
