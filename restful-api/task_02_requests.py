@@ -31,7 +31,6 @@ def fetch_and_save_posts():
     for data in rsp.json():
         tmp = {'id': data['id'], 'title': data['title'], 'body': data['body']}
         all_data.append(tmp)
-    print(all_data[0].keys())
 
     with open('posts.csv', 'w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=['id', 'title', 'body'])
