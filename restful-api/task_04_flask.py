@@ -14,7 +14,7 @@ def not_found(error):
     return jsonify({'error': 'User not found'}), 404
 
 
-@app.route("/")
+@app.route("/home")
 def home():
     return "Welcome to the flask API!"
 
