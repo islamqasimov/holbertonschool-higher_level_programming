@@ -9,14 +9,9 @@ users = {}
 app = Flask(__name__)
 
 
-@app.errorhandler(404)
-def not_found(error):
-    return jsonify({'error': 'User not found'}), 404
-
-
-@app.route("/home")
+@app.route("/")
 def home():
-    return "Welcome to the flask API!"
+    return "Welcome to the Flask API!"
 
 
 @app.route("/data")
@@ -32,7 +27,7 @@ def status():
 @app.route("/users/<username>")
 def get_user(username):
     if username not in users:
-        not_found()
+        return jsonify({'error': 'User not found'}), 404
     return jsonify(users[username])
 
 
@@ -41,15 +36,15 @@ def add_user():
     try:
         data = request.get_json()
     except Exception:
-        return jsonify({"error":"Invalid JSON"}), 400
+        return jsonify({"error": "Invalid JSON"}), 400
 
     username = data.get('username')
 
     if not username:
-        return {"error":"Username is required"}, 400
+        return {"error": "Username is required"}, 400
 
     if username in users:
-        return {"error":"Username already exists"}, 409
+        return {"error": "Username already exists"}, 409
 
     users[username] = {
         "username": username,
@@ -62,7 +57,7 @@ def add_user():
         "message": "User added",
         "user": users[username]
     }), 201
-    
+
 
 if __name__ == "__main__":
     app.run()
